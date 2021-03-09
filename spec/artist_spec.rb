@@ -62,6 +62,8 @@ describe 'Artist' do
       expect(artist_1).to be_an(Artist)
       expect(artist_2).to be_an(Artist)
       
+      expect(Artist.all.length).to eq(1)
+      
 =begin      
     describe '#artist_name=' do
     it "accepts an artist's name, finds or creates an Artist instance and assigns it to the Song's artist attribute" do
