@@ -6,18 +6,18 @@ class MP3Importer
   end
   
   def files
-    @mp3_files = []
+    @mp3_filenames = []
     mp3_paths = Dir.glob(@path + "/*.mp3")
     mp3_paths.each do |mp3_path|
       mp3_file = mp3_path.split(/.+\//)[1]
-      @mp3_files << mp3_file
+      @mp3_filenames << mp3_file
     end
-    @mp3_files
+    @mp3_filenames
   end
   
   def import 
-    files.each do |file| 
-      song_name = file.split(" - ")[1]
+    files.each do |filename| 
+      song_name = filename.split(" - ")[1]
       Song.new(song_name)
     end
   end
