@@ -13,6 +13,7 @@ class MP3Importer
       @mp3_files << mp3_file
     end
     @mp3_files
+    binding.pry
   end
   
   def import 
