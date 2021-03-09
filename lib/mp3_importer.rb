@@ -13,7 +13,6 @@ class MP3Importer
       @mp3_files << mp3_file
     end
     @mp3_files
-    binding.pry
   end
   
   def import 
@@ -21,6 +20,7 @@ class MP3Importer
       song_name = file.split(" - ")[1]
       Song.new(song_name)
     end
+    binding.pry
   end
     
 end
