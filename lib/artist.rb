@@ -21,12 +21,12 @@ class Artist
     song.artist = self
   end
   
-  def self.find_or_create_by_name(artist_name)
-    if @@all.none?{|artist| artist.name == artist_name}
-      Artist.new(artist_name)
-      @@all.find{|artist| artist.name == artist_name}      
+  def self.find_or_create_by_name(song_artist_name)
+    if @@all.none?{|artist| artist.name == song_artist_name}
+      Artist.new(song_artist_name)
+      @@all.find{|artist| artist.name == song_artist_name}      
     else
-      @@all.find{|artist| artist.name == artist_name}
+      @@all.find{|artist| artist.name == song_artist_name}
     end
   end
   
