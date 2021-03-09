@@ -22,12 +22,14 @@ class Artist
   end
   
   def self.find_or_create_by_name(artist_name)
+    @@all.none?{|artist| artist.name == artist_name}
+=begin    
     if @@all.none?{|artist| artist.name == artist_name}
       @@all << Artist.new(artist_name)
       @@all.find{|artist| artist.name == artist_name}      
     else
       @@all.find{|artist| artist.name == artist_name}
-    end
+=end
     binding.pry
   end
   
