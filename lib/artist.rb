@@ -23,7 +23,7 @@ class Artist
   
   def self.find_or_create_by_name(song_artist_name)
     if @@all.none?{|artist| artist.name == song_artist_name}
-      Artist.new(song_artist_name)
+      self.new(song_artist_name)
       @@all.find{|artist| artist.name == song_artist_name}      
     else
       @@all.find{|artist| artist.name == song_artist_name}
