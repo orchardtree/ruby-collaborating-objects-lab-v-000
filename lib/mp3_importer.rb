@@ -20,7 +20,6 @@ class MP3Importer
       song_name = file.split(" - ")[1]
       Song.new(song_name)
     end
-    binding.pry
   end
     
 end
