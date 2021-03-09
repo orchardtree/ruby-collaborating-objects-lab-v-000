@@ -11,7 +11,6 @@ class MP3Importer
     mp3_paths.each do |mp3_path|
       mp3_file = mp3_path.split(/.+\//)[1]
       @mp3_files << mp3_file
-      binding.pry
     end
     @mp3_files
   end
