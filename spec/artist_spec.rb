@@ -61,6 +61,18 @@ describe 'Artist' do
       artist_2 = Artist.find_or_create_by_name("Michael Jackson")
       expect(artist_1).to be_an(Artist)
       expect(artist_2).to be_an(Artist)
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     end
 
     it 'finds or creates an artist by name maintaining uniqueness of objects by name property' do
