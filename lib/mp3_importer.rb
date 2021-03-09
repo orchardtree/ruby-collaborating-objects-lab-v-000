@@ -9,7 +9,7 @@ class MP3Importer
     @mp3_files = []
     mp3_paths = Dir.glob(@path + "/*.mp3")
     mp3_paths.each do |mp3_path|
-      @mp3_files << mp3_path(/.+/\/).[1]
+      @mp3_files << mp3_path(/.+/).[1]
       binding.pry
     end
     @mp3_files
