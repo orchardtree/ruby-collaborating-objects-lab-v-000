@@ -28,6 +28,7 @@ class Artist
     else
       @@all.find{|artist| artist.name == artist_name}
     end
+    binding.pry
   end
   
   def print_songs
